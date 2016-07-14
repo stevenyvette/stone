@@ -19,6 +19,7 @@
     <script type="text/javascript" src="lib/echarts.js"></script>
     <script type="text/javascript" src="lib/jquery.js"></script>
     <script type="text/javascript" src="lib/dataTool.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
 </head>
 
 <body>
@@ -377,7 +378,7 @@
 		<div id="page-wrapper">
             <a id="head"></a>
             <div class="header"> 
-                <h1 class="page-header" >Network Visualization</h1>
+                <h1 class="page-header">Chinese Aviation Network</h1>
                 <input type="file" accept=".gexf,.xml" onchange="get_filepath1()" id="filename" style="opacity:50%;width:100%">
                 <div class="form-group input-group">
                     <input type="text" class="form-control" placeholder="Enter the full name of the graph file. (.gexf  or .xml)" id='file-name'>
@@ -391,13 +392,40 @@
                     <strong id="show-file-name">Network ID:&nbsp</strong>
     		    </ol>				
     		</div>
-            <div id="page-inner">
+            <div id="page-inner" >
+                <div class="row" id="1-5" style="display:none">
+                    <a id="add-confirm"></a>
+                    <a id="map-graph"></a>
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" >
+                                Map Graph
+                            </div>
+                            <div class="panel-body">
+                                <div id="map" style="height:700px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="1-6" style="display:none">
+                    <a id="degree-bc-1"></a>
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" >
+                                Degree-BC Chart
+                            </div>
+                            <div class="panel-body">
+                                <div id="degree-bc" style="height:700px"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row" id="1-1" style="display:none">
                     <a id="network-info"></a>  
         			<div class="col-xs-6 col-md-3">
         				<div class="panel panel-default">
         					<div class="panel-body easypiechart-panel" >
-        						<h4>Node Count</h4>
+        						<h4>Airports </h4>
         						<div class="easypiechart" id="easypiechart-blue" data-percent="100" style="visibility:hidden"><span class="percent" id="node-count"></span>
         						</div>
         					</div>
@@ -406,8 +434,8 @@
                     <div class="col-xs-6 col-md-3">
                         <div class="panel panel-default">
                             <div class="panel-body easypiechart-panel">
-                                <h4>Network Type</h4>
-                                <div class="easypiechart" id="easypiechart-teal" data-percent="100" style="visibility:hidden"><span class="percent" id="network-type"></span>
+                                <h4>Average Route Length</h4>
+                                <div class="easypiechart" id="easypiechart-teal" data-percent="100" style="visibility:hidden"><span class="percent" id="average_path_length"></span>
                                 </div>
                             </div>
                         </div>
@@ -415,7 +443,7 @@
         			<div class="col-xs-6 col-md-3">
         				<div class="panel panel-default">
         					<div class="panel-body easypiechart-panel">
-        						<h4>Lethality</h4>
+        						<h4>Efficiency</h4>
         						<div class="easypiechart" id="easypiechart-red" style="visibility:hidden" data-percent="100" ><span class="percent" id="lethality"></span>
         						</div>
         					</div>
