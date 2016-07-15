@@ -49,11 +49,11 @@ function table_start(){
 }
 
 function mouse_over_credit(){
-	document.getElementById("credit").innerHTML = "Â¥6000";
+	document.getElementById("credit").innerHTML = "æ¥¼6000";
 }
 
 function mouse_out_credit(){
-	document.getElementById("credit").innerHTML = "Â¥4800";
+	document.getElementById("credit").innerHTML = "æ¥¼4800";
 }
 
 Array.prototype.del = function(varElement)
@@ -61,7 +61,7 @@ Array.prototype.del = function(varElement)
     var numDeleteIndex = -1;
     for (var i=0; i<this.length; i++)
     {
-        // ÑÏ¸ñ±È½Ï£¬¼´ÀàÐÍÓëÊýÖµ±ØÐëÍ¬Ê±ÏàµÈ¡£
+        // ä¸¥æ ¼æ¯”è¾ƒï¼Œå³ç±»åž‹ä¸Žæ•°å€¼å¿…é¡»åŒæ—¶ç›¸ç­‰ã€‚
         if (this[i] == varElement)
         {
             this.splice(i, 1);
