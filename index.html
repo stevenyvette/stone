@@ -14,12 +14,14 @@
     <link href='http://fonts.useso.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css"/> 
     <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/introjs.css"/>
     <script type="text/javascript" src="lib/function.js"></script>
     <script type="text/javascript" src="lib/reshape.js"></script>
     <script type="text/javascript" src="lib/echarts.js"></script>
     <script type="text/javascript" src="lib/jquery.js"></script>
     <script type="text/javascript" src="lib/dataTool.js"></script>
     <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="lib/intro.js"></script>
 </head>
 
 <body>
@@ -34,7 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><strong>Insight.</strong></a>
+                <a class="navbar-brand" href="index.html"  data-step="1" data-intro="欢迎来到Insight网络可视化分析平台！<p>请跟着学习向导一览使用技巧。</p><p>ps:键盘快捷键：&rarr;</p>" data-position='right'><strong>Insight.</strong></a>
 			    <div id="sideNav" href=""><i class="fa fa-caret-right"></i>
                 </div>
             </div>
@@ -247,16 +249,15 @@
                 <!-- /.dropdown -->
             </ul>
         </nav>
-
         <!-- /. NAV SIDE  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
+        <nav class="navbar-default navbar-side" role="navigation" data-step="2" data-intro="导航与功能面板<p>屏幕左侧的面板是分析过程中不同结果图、文件的快速导航面板与图相关操作功能面板。</p><p>键盘快捷键：&rarr;</p>" data-position='right'>
+            <div class="sidebar-collapse"  >
                 <ul class="nav" id="main-menu">
                     <li>
-                        <a class="active-menu" href="#head"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a class="active-menu" href="#head" data-step="3" data-intro="主面板<p>一切开始的地方</br>可直接跳转到页面顶部</p>键盘快捷键：&rarr;" data-position='right'><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="#page-wrapper"><i class="fa fa-edit"></i> Add & Delete<span class="fa arrow"></span></a>
+                        <a href="#page-wrapper" data-step="4" data-intro="功能模块<p>图相关操作,可下拉菜单。</br>包含节点、连边的添加、删除操作</br></p>键盘快捷键：&rarr;" data-position='right'><i class="fa fa-edit"></i> Add & Delete<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="#"><i class="fa fa-plus-circle"></i> Add Node<span class="fa arrow"></span></a>
@@ -319,57 +320,27 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#network-info"><i class="fa fa-info"></i> Network Information</a>
+                        <a href="#network-info" data-step="5" data-intro="基本信息<p>网络图的基本信息将在这部分呈现</p>键盘快捷键：&rarr;" data-position='right'><i class="fa fa-info"></i> Network Information</a>
                     </li>
 					<li>
-                        <a href="#network-graph"><i class="fa fa-desktop"></i> Network Graph</a>
+                        <a href="#network-graph" data-step="6" data-intro="图文件可视化<p>导入图文件后显示各类分析的可视化结果</p>键盘快捷键：&rarr;" data-position='top'><i class="fa fa-desktop"></i> Network Graph</a>
                     </li>
                     <li>
-                        <a href="#pocc-chart"><i class="fa fa-bar-chart-o"></i> POCC chart</a>
+                        <a href="#pocc-chart" data-step="7" data-intro="POCC值柱状图<p>针对每个节点的POCC值（即面向属性的聚类系数）</br>同时给出CC值（聚类系数）作为比较</p>键盘快捷键：&rarr;" data-position='right'><i class="fa fa-bar-chart-o"></i> POCC chart</a>
                     </li>
                     
                     <li>
-                        <a href="#property-table"><i class="fa fa-table"></i> Property Table</a>
+                        <a href="#property-table" data-step="8" data-intro="节点属性表<p>以表格的形式给出所有节点的各类属性</br>表格具有检索、排序等功能</p>键盘快捷键：&rarr;" data-position='right'><i class="fa fa-table"></i> Property Table</a>
                     </li>
                     <li>
-                        <a href="#candidate-chart"><i class="fa fa-circle-o"></i> Candidate chart</a>
+                        <a href="#candidate-chart" data-step="9" data-intro="候选替补者饼图<p>针对每个节点的POCC值（即面向属性的聚类系数）</br>同时给出CC值（聚类系数）作为比较</p>键盘快捷键：&rarr;" data-position='right'><i class="fa fa-circle-o"></i> Candidate chart</a>
                     </li>
                     <li>
-                        <a href="#rv-rp-chart"><i class="fa fa-bar-chart-o"></i> RV & RP chart</a>
+                        <a href="#rv-rp-chart" data-step="10" data-intro="替换值与替换概率<p>根据算法以及移除的节点计算其他节点的RV、RP值</br>以折现图的形式给出结果</p>键盘快捷键：&rarr;" data-position='right'><i class="fa fa-bar-chart-o"></i> RV & RP chart</a>
                     </li>
-                    <li>
-                        <a href="help.html"><i class="fa fa-question"></i> Help</a>
+                    <li >
+                        <a href="help.html" data-step="11" data-intro="帮助向导<p>可以重新打开向导得到帮助</p>键盘快捷键：&rarr;" data-position='right' ><i class="fa fa-question"></i> Help</a>
                     </li>
-                    <!--
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#" >Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="empty.html"><i class="fa fa-fw fa-file"></i> Empty Page</a>
-                    </li>
-                -->
                 </ul>
             </div>
         </nav>
@@ -377,23 +348,28 @@
         <!--/. MAIN BODY -->
 		<div id="page-wrapper">
             <a id="head"></a>
-            <div class="header"> 
+            <div class="header" > 
                 <h1 class="page-header">Network Visualization Demon</h1>
-                <input type="file" accept=".gexf,.xml" onchange="get_filepath1()" id="filename" style="opacity:50%;width:100%" href="add-confirm">
-                <div class="form-group input-group">
-                    <input type="text" class="form-control" placeholder="Enter the full name of the graph file. (.gexf  or .xml)" id='file-name'>
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" onclick="get_filepath2()"><i class="fa fa-search"></i>
-                        </button>
-                    </span>
+                <div data-step="12" data-intro="导入图文件<p>可视化分析的第一步</br>导入相关图文件</br>方法一:直接选择文件目录打开</br>方法二:直接输入文件的相对路径</p>键盘快捷键：&rarr;" data-position='bottom'>
+                    <input type="file" accept=".gexf,.xml" onchange="get_filepath1()" id="filename" style="opacity:50%;width:100%" href="add-confirm" >
+                    <div class="form-group input-group" >
+                        <input type="text" class="form-control" placeholder="Enter the full name of the graph file. (.gexf  or .xml)" id='file-name'>
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="get_filepath2()"><i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                
+                    <a id="open-graph-confirm"></a>
+        			<ol class="breadcrumb" style="height:44px" >
+                        <strong id="show-file-name">Network ID:&nbsp</strong>
+        		    </ol>
                 </div>
-                <a id="open-graph-confirm"></a>
-    			<ol class="breadcrumb" style="height:44px">
-                    <strong id="show-file-name">Network ID:&nbsp</strong>
-    		    </ol>				
     		</div>
             <div id="page-inner" >
-                <div class="row" id="1-5" style="display:none">
+                <div class="row" id="tmp" style="height:400px,display:block" data-step="13" data-intro="可视化分析<p>导入图文件后显示各类分析的可视化结果</p>键盘快捷键：&rarr;" data-position='top'>
+                </div>
+                <div class="row" id="1-5" style="display:none" >
                     <a id="add-confirm"></a>
                     <a id="network-graph"></a>
                     <div class="col-md-12 col-sm-12 col-xs-12 ">
@@ -577,7 +553,6 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
             <!-- /. PAGE INNER  -->
@@ -611,6 +586,7 @@
             $('#dataTables-example').dataTable();
         });
     </script>
+    <script type="text/javascript">introJs().start();</script>
 
 
 </body>

@@ -11,6 +11,8 @@ function get_filepath2(){
 }
 
 function set_block_1(){
+
+	document.getElementById("tmp").style.display="none";
 	document.getElementById("1-1").style.display="block";
 	document.getElementById("1-2").style.display="block";
 	document.getElementById("1-3").style.display="block";
@@ -28,6 +30,7 @@ function set_init(){
 	document.getElementById("1-1").style.visibility="visible";
 	document.getElementById("1-2").style.visibility="visible";
 	document.getElementById("1-3").style.visibility="visible";
+
 
 	document.getElementById("easypiechart-blue").style.visibility="visible";
 	document.getElementById("node-count").innerHTML = count;
