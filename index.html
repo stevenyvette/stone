@@ -339,7 +339,7 @@
                         <a href="#rv-rp-chart" data-step="10" data-intro="替换值与替换概率<p>根据算法以及移除的节点计算其他节点的RV、RP值</br>以折现图的形式给出结果</p>键盘快捷键：&rarr;" data-position='right'><i class="fa fa-bar-chart-o"></i> RV & RP chart</a>
                     </li>
                     <li >
-                        <a href="help.html" data-step="11" data-intro="帮助向导<p>可以重新打开向导得到帮助</p>键盘快捷键：&rarr;" data-position='right' ><i class="fa fa-question"></i> Help</a>
+                        <a href="#" data-step="11" data-intro="帮助向导<p>可以重新打开向导得到帮助</p>键盘快捷键：&rarr;" data-position='right' onclick="javascript:introJs().start();"><i class="fa fa-question" ></i> Help</a>
                     </li>
                 </ul>
             </div>
@@ -587,6 +587,9 @@
         });
     </script>
     <script type="text/javascript">introJs().start();</script>
+    <script>introJs().oncomplete(function() {
+  alert("end of introduction");
+});</script>
 
 
 </body>
