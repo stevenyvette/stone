@@ -27,6 +27,34 @@ function set_block_2(){
 	document.getElementById("2-2").style.display="block";
 }
 
+function graph_remove () {
+	document.getElementById("graph-remove").style.display="block";
+    document.getElementById("graph-reshape").style.display="none";
+    document.getElementById("relationship-remove").style.display="none";
+    document.getElementById("relationship-reshape").style.display="none";
+}
+
+function graph_reshape () {
+	document.getElementById("graph-remove").style.display="none";
+    document.getElementById("graph-reshape").style.display="block";
+    document.getElementById("relationship-remove").style.display="none";
+    document.getElementById("relationship-reshape").style.display="none";
+}
+
+function relationship_remove () {
+	document.getElementById("graph-remove").style.display="none";
+    document.getElementById("graph-reshape").style.display="none";
+    document.getElementById("relationship-remove").style.display="block";
+    document.getElementById("relationship-reshape").style.display="none";
+}
+
+function relationship_reshape () {
+	document.getElementById("graph-remove").style.display="none";
+    document.getElementById("graph-reshape").style.display="none";
+    document.getElementById("relationship-remove").style.display="none";
+    document.getElementById("relationship-reshape").style.display="block";
+}
+
 function set_init(){
 	document.getElementById("1-1").style.visibility="visible";
 	document.getElementById("1-2").style.visibility="visible";
